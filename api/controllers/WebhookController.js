@@ -17,11 +17,18 @@ module.exports = {
 
       webhook = await Webhook.create(data).fetch();
       //remover e colocar em cron (envio de mensagem telegram
+
+      let linkDetails = `${data.ServerUrl}web/index.html#!/details?id=${data.ItemId}&serverId=${data.ServerId}`;
       let mensagem = `AdvanServer\n Novos ${
         data.ItemType === "Movie" ? "filmes" : "conteudos"
-      }: ${data.SeriesName !== undefined ? data.SeriesName + ":" : ""} ${
-        data.Name
-      }`;
+      }:\n ${
+        data.SeriesName !== undefined
+          ? data.SeriesName + "\nTemporada " + data.SeasonNumber00 + " - "
+          : ""
+      } ${data.Name}
+      \n
+      Para mais detalhes acesse o link a baixo:\n${linkDetails}
+      `;
 
       console.log(mensagem);
       await sails.helpers.telegramBot(mensagem);
