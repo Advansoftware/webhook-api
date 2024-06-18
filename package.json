@@ -19,6 +19,7 @@
     "eslint": "5.16.0"
   },
   "scripts": {
+    "dev": "PORT=1560 NODE_ENV=production node app.js",
     "start": "NODE_ENV=production node app.js",
     "win": "set NODE_ENV=production && node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
@@ -31,8 +32,5 @@
     "url": "git://github.com/beeleads/api.git"
   },
   "author": "beeleads",
-  "license": "",
-  "engines": {
-    "node": "^18.17"
-  }
+  "license": ""
 }
