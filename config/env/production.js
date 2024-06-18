@@ -245,7 +245,8 @@ module.exports = {
     onlyAllowOrigins: [
       "http://201.159.153.157:1337",
       "http://app.advanfix.shop:1337",
-      "http://app.advanfix.shop:8096",
+      "http://advanfix.shop:8096",
+      "http://201.159.155.191:1560",
     ],
     /***************************************************************************
      *                                                                          *
@@ -352,7 +353,7 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   custom: {
-    baseUrl: "http://app.advanfix.shop:1337",
+    baseUrl: "http://201.159.155.191:1337/",
     internalEmailAddress: "support@example.com",
 
     // sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU',
